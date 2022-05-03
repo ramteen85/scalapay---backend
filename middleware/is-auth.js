@@ -28,7 +28,6 @@ module.exports = async (req, res, next) => {
     // wrap up
     req.userId = decodedToken.userId;
     req.email = decodedToken.email;
-    req.nickname = decodedToken.nickname;
     next();
   } catch (error) {
     error.statusCode = 401;

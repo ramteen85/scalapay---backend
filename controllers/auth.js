@@ -40,7 +40,6 @@ exports.login = async (req, res, next) => {
     const token = jwt.sign(
       {
         email: user.email,
-        username: user.username,
         userId: user._id.toString(),
       },
       config.AUTHKEY,
